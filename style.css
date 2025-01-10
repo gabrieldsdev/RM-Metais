@@ -33,7 +33,7 @@ header .logo img {
     margin-bottom: 0px; /* Adiciona um espaçamento entre o logo e o menu */
 }
 
-nav ul {
+/* nav ul {
     display: flex;
     list-style-type: none;
     margin-right: 20px;
@@ -48,7 +48,7 @@ nav ul li a {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
-}
+} */
 
 /* Seção Inicial */
 #banner {
