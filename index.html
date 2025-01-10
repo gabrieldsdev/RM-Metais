@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM Metais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Insira o logo aqui -->
+            <img src="images/rm metais white.png" alt="Logo da Empresa">
+        </div>
+        <div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <section id="banner">
+            <div class="overlay-text">
+                A grande missão da nossa <br> empresa será <br> sempre a satisfação dos <br> nossos clientes
+            </div> 
+    </section>
+    
+    <section>
+            <h2>Serviços Prestados</h2>
+            <div class="servicos">
+                <!-- Compra e venda de ferros reaproveitados -->
+                <button onclick="window.location.href='https://wa.me/1234567890?text=Olá%20estou%20interessado%20na%20compra%20e%20venda%20de%20ferros%20reaproveitados.'">
+                    Compra e venda de ferros reaproveitados
+                </button>
+
+                <!-- Compra de Sucatas Metálicas -->
+                <button onclick="window.location.href='https://wa.me/1234567890?text=Olá%20estou%20interessado%20na%20compra%20de%20sucatas%20metálicas.'">
+                    Compra de Sucatas Metálicas
+                </button>
+
+                <!-- Notas de Descartes -->
+                <button onclick="window.location.href='https://wa.me/1234567890?text=Olá%20estou%20interessado%20em%20notas%20de%20descartes.'">
+                    Notas de Descartes
+                </button>
+
+                <!-- Licença Ambiental -->
+                <button onclick="window.location.href='https://wa.me/1234567890?text=Olá%20estou%20interessado%20em%20licença%20ambiental.'">
+                    Licença Ambiental
+                </button>
+
+                <!-- Coleta de Materiais -->
+                <button onclick="window.location.href='https://wa.me/1234567890?text=Olá%20estou%20interessado%20em%20coleta%20de%20materiais.'">
+                    Coleta de Materiais
+                </button>
+                            </div>
+    </section>
+
+
+    <section>
+            <h3>Galeria de Fotos</h3>
+            <div class="galeria">
+                <div class="galeria">
+                    <img src="images/1.jpg" alt="Foto 1" class="foto" onclick="openModal(this)">
+                    <img src="images/2.jpg" alt="Foto 2" class="foto" onclick="openModal(this)">
+                    <img src="images/3.jpg" alt="Foto 3" class="foto" onclick="openModal(this)">
+                    <img src="images/4.jpg" alt="Foto 4" class="foto" onclick="openModal(this)">
+                    <img src="images/5.jpg" alt="Foto 5" class="foto" onclick="openModal(this)">
+                    <img src="images/6.jpg" alt="Foto 6" class="foto" onclick="openModal(this)">
+                    <img src="images/7.jpg" alt="Foto 7" class="foto" onclick="openModal(this)">
+                    <img src="images/8.jpg" alt="Foto 8" class="foto" onclick="openModal(this)">
+                    <img src="images/9.jpg" alt="Foto 9" class="foto" onclick="openModal(this)">
+                    <img src="images/10.jpg" alt="Foto 10" class="foto" onclick="openModal(this)">
+                    <img src="images/11.jpg" alt="Foto 11" class="foto" onclick="openModal(this)">
+                    <img src="images/12.jpg" alt="Foto 12" class="foto" onclick="openModal(this)">
+                    <img src="images/13.jpg" alt="Foto 13" class="foto" onclick="openModal(this)">
+                    <img src="images/14.jpg" alt="Foto 14" class="foto" onclick="openModal(this)">
+                
+            </div>
+    </section>
+
+    <!-- O Modal para exibir a imagem em tamanho maior -->
+    <div id="lightbox-modal" class="lightbox-modal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Imagem Ampliada">
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>RM Metais &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
