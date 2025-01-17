@@ -164,17 +164,7 @@ h3 {
     padding-bottom: 5px;
     margin-top: 40px;
 }
-.galeria {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    max-width: 800px; /* Define a largura máxima da galeria */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-}
+
 
 /* Estilos para a Galeria */
 .galeria img {
@@ -188,6 +178,44 @@ h3 {
 .galeria img:hover {
     transform: scale(1.1); /* Aumenta a imagem levemente ao passar o mouse */
     filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.gallery-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.gallery-buttons button {
+    width: 150px;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: rgb(22, 24, 28); /* Preto claro */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    text-align: center;
+}
+
+.gallery-buttons button:hover {
+    transform: scale(1.05); /* Ampliação leve ao passar o mouse */
+    background-color: rgb(35, 37, 42); /* Cor de fundo mais clara no hover */
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 800px; /* Define a largura máxima da galeria */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
 }
 
 /* Estilo do Modal (lightbox) */
