@@ -291,3 +291,22 @@ footer p {
     transform: scale(1.1); /* Ampliação leve no hover */
 }
 
+.instagram-icon {
+    position: fixed; /* Fixa o ícone no canto da tela */
+    bottom: 90px; /* Distância da parte inferior da tela */
+    right: 20px; /* Distância do lado direito da tela */
+    width: 60px; /* Largura do ícone */
+    height: 60px; /* Altura do ícone */
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave para o hover */
+}
+
+.instagram-icon img {
+    width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Deixa o ícone circular */
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1); /* Ampliação leve no hover */
