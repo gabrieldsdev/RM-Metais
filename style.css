@@ -15,7 +15,7 @@ body {
 /* Cabeçalho */
 header {
     width: 100%;
-    background-color: rgb(22, 24, 28);
+    background-color: rgb(2, 0, 2);
     /* Preto claro */
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ nav ul li a {
     #banner {
         display: relative;
         /* Exibe o banner */
-        height: 85vh;
+        height: 79vh;
         /* Define a altura do banner como 50vh */
     }
 
@@ -181,7 +181,7 @@ nav ul li a {
     #banner {
         display: relative;
         /* Exibe o banner */
-        height: 85vh;
+        height: 79vh;
         /* Define a altura do banner como 50vh */
     }
 
@@ -227,7 +227,7 @@ h2 {
     max-width: 400px;
     padding: 12px 0;
     font-size: 16px;
-    background-color: rgb(22, 24, 28);
+    background-color: rgb(2, 0, 2);
     /* Cor de fundo */
     border: none;
     color: white;
@@ -287,7 +287,7 @@ h3 {
     width: 150px;
     padding: 10px 0;
     font-size: 16px;
-    background-color: rgb(22, 24, 28);
+    background-color: rgb(2, 0, 2);
     /* Preto claro */
     border: none;
     color: white;
@@ -367,7 +367,7 @@ h3 {
 
 /* Rodapé */
 footer {
-    background-color: rgb(22, 24, 28);
+    background-color: rgb(2, 2, 2);
     /* Preto claro */
     text-align: center;
     padding: 20px;
