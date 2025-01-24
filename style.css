@@ -15,22 +15,33 @@ body {
 /* Cabeçalho */
 header {
     width: 100%;
-    background-color: rgb(22, 24, 28); /* Preto claro */
-    display: flex;  
-    flex-direction: column; /* Alinha o logo e o menu em coluna */
+    background-color: rgb(22, 24, 28);
+    /* Preto claro */
+    display: flex;
+    flex-direction: column;
+    /* Alinha o logo e o menu em coluna */
     justify-content: center;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    text-align: center; /* Garante que o texto do menu esteja centralizado */
-    min-height: 8vh; /* A altura mínima do cabeçalho será 10% da altura da janela */
-    padding: 15px; /* Adiciona um padding vertical (cima/baixo) para espaçar o conteúdo */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    /* Garante que o texto do menu esteja centralizado */
+    min-height: 8vh;
+    /* A altura mínima do cabeçalho será 10% da altura da janela */
+    padding: 15px;
+    /* Adiciona um padding vertical (cima/baixo) para espaçar o conteúdo */
 }
 
 header .logo img {
-    width: 10%; /* Ajuste o tamanho do logo conforme necessário */
-    height: 5%; /* Mantém a proporção da imagem */
-    max-width: 100%; /* Garante que o logo não ultrapasse o limite da div */
-    min-width: 200px; /* Define um tamanho mínimo para a largura do logo */
-    margin-bottom: 0px; /* Adiciona um espaçamento entre o logo e o menu */
+    width: 10%;
+    /* Ajuste o tamanho do logo conforme necessário */
+    height: 5%;
+    /* Mantém a proporção da imagem */
+    max-width: 100%;
+    /* Garante que o logo não ultrapasse o limite da div */
+    min-width: 200px;
+    /* Define um tamanho mínimo para a largura do logo */
+    margin-bottom: 0px;
+    /* Adiciona um espaçamento entre o logo e o menu */
 }
 
 /* nav ul {
@@ -52,34 +63,46 @@ nav ul li a {
 
 /* Seção Inicial */
 #banner {
-    position: relative; /* Necessário para o pseudo-elemento funcionar */
+    position: relative;
+    /* Necessário para o pseudo-elemento funcionar */
     width: 100%;
-    height: 35vh; /* Ajuste conforme necessário */
+    height: 35vh;
+    /* Ajuste conforme necessário */
     margin-bottom: 20px;
-    overflow: hidden; /* Garante que o pseudo-elemento não ultrapasse o #banner */
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não ultrapasse o #banner */
 }
 
 #banner::after {
-    content: ""; /* Cria o pseudo-elemento */
+    content: "";
+    /* Cria o pseudo-elemento */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/background3.jpg'); /* Mesma imagem de fundo */
+    background-image: url('images/background3.jpg');
+    /* Mesma imagem de fundo */
     background-size: cover;
     background-position: center center;
-    filter: blur(3px); /* Adiciona o desfoque */
-    z-index: -1; /* Garante que o pseudo-elemento fique atrás do texto */
-    opacity: 1; /* Mantém a visibilidade */
+    filter: blur(3px);
+    /* Adiciona o desfoque */
+    z-index: -1;
+    /* Garante que o pseudo-elemento fique atrás do texto */
+    opacity: 1;
+    /* Mantém a visibilidade */
 }
 
 .overlay-text {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Centraliza completamente */
-    color: rgb(0, 0, 0); /* Cor do texto */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centraliza completamente */
+    color: rgb(0, 0, 0);
+    /* Cor do texto */
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -91,76 +114,126 @@ nav ul li a {
     font-size: 22px;
 }
 
+/* Vídeo será exibido em telas menores */
+#banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    /* Inicialmente escondido */
+
+
+}
+
 @media (max-width: 1200px) {
     .overlay-text {
-        font-size: 22px; /* Ajuste para telas menores */
+        font-size: 22px;
+        /* Ajuste para telas menores */
     }
 }
 
 @media (max-width: 768px) {
     .overlay-text {
-        font-size: 20px; /* Ajuste para tablets */
+        font-size: 20px;
     }
+
 }
 
 @media (max-width: 480px) {
     .overlay-text {
-        font-size: 17px; /* Ajuste para celulares */
-
+        font-size: 17px;
     }
+
+
 }
+
 
 @media (max-width: 340px) {
     .overlay-text {
-        font-size: 15px; /* Ajuste para celulares */
+        /* font-size: 15px; */
+        display: none;
+    }
+
+    #banner {
+        display: relative;
+        /* Exibe o banner */
+        height: 70vh;
+        /* Define a altura do banner como 50vh */
+    }
+
+    #banner-video {
+        display: block;
+        /* Exibe o vídeo */
+        position: absolute;
+        /* Garante que o vídeo preencha a tela */
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        /* Garante que o vídeo preencha o contêiner */
 
     }
 }
 
-
 /* Centralizando o título */
 h2 {
-    text-align: center; /* Alinha o texto ao centro */
-    font-size: 20px; /* Ajuste o tamanho do título conforme necessário */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    font-size: 20px;
+    /* Ajuste o tamanho do título conforme necessário */
     padding-bottom: 5px;
-    
+
 }
 
 /* Container dos botões */
 .servicos {
     display: flex;
-    flex-direction: column; /* Organiza os botões um abaixo do outro */
-    align-items: center; /* Centraliza os botões horizontalmente */
-    gap: 5px; /* Espaçamento entre os botões */
+    flex-direction: column;
+    /* Organiza os botões um abaixo do outro */
+    align-items: center;
+    /* Centraliza os botões horizontalmente */
+    gap: 5px;
+    /* Espaçamento entre os botões */
     margin-top: 20px;
 }
 
 .servicos button {
-    width: 70%; /* Largura do botão */
+    width: 70%;
+    /* Largura do botão */
     max-width: 400px;
     padding: 12px 0;
     font-size: 16px;
-    background-color: rgb(22, 24, 28); /* Cor de fundo */
+    background-color: rgb(22, 24, 28);
+    /* Cor de fundo */
     border: none;
     color: white;
     cursor: pointer;
     text-align: center;
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 5px;
+    /* Bordas arredondadas */
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Transição suave */
 }
 
 /* Efeito de hover nos botões */
 .servicos button:hover {
-    transform: scale(1.05); /* Ampliação leve ao passar o mouse */
-    background-color: rgb(35, 37, 42); /* Cor de fundo mais clara no hover */
+    transform: scale(1.05);
+    /* Ampliação leve ao passar o mouse */
+    background-color: rgb(35, 37, 42);
+    /* Cor de fundo mais clara no hover */
 }
 
 /* Galeria de Fotos */
 
 h3 {
-    text-align: center; /* Alinha o texto ao centro */
-    font-size: 20px; /* Ajuste o tamanho do título conforme necessário */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    font-size: 20px;
+    /* Ajuste o tamanho do título conforme necessário */
     padding-bottom: 5px;
     margin-top: 40px;
 }
@@ -176,8 +249,10 @@ h3 {
 }
 
 .galeria img:hover {
-    transform: scale(1.1); /* Aumenta a imagem levemente ao passar o mouse */
-    filter: brightness(1.2); /* Aumenta o brilho */
+    transform: scale(1.1);
+    /* Aumenta a imagem levemente ao passar o mouse */
+    filter: brightness(1.2);
+    /* Aumenta o brilho */
 }
 
 .gallery-buttons {
@@ -191,19 +266,24 @@ h3 {
     width: 150px;
     padding: 10px 0;
     font-size: 16px;
-    background-color: rgb(22, 24, 28); /* Preto claro */
+    background-color: rgb(22, 24, 28);
+    /* Preto claro */
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 5px;
+    /* Bordas arredondadas */
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Transição suave */
     text-align: center;
 }
 
 .gallery-buttons button:hover {
-    transform: scale(1.05); /* Ampliação leve ao passar o mouse */
-    background-color: rgb(35, 37, 42); /* Cor de fundo mais clara no hover */
+    transform: scale(1.05);
+    /* Ampliação leve ao passar o mouse */
+    background-color: rgb(35, 37, 42);
+    /* Cor de fundo mais clara no hover */
 }
 
 .galeria {
@@ -213,20 +293,25 @@ h3 {
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    max-width: 800px; /* Define a largura máxima da galeria */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    max-width: 800px;
+    /* Define a largura máxima da galeria */
+    margin-left: auto;
+    /* Centraliza horizontalmente */
+    margin-right: auto;
+    /* Centraliza horizontalmente */
 }
 
 /* Estilo do Modal (lightbox) */
 .lightbox-modal {
-    display: none; /* Inicialmente escondido */
+    display: none;
+    /* Inicialmente escondido */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro */
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -255,12 +340,14 @@ h3 {
 }
 
 .close-btn:hover {
-    color: #f39c12; /* Cor dourada para o botão de fechar ao passar o mouse */
+    color: #f39c12;
+    /* Cor dourada para o botão de fechar ao passar o mouse */
 }
 
 /* Rodapé */
 footer {
-    background-color: rgb(22, 24, 28);  /* Preto claro */
+    background-color: rgb(22, 24, 28);
+    /* Preto claro */
     text-align: center;
     padding: 20px;
 }
@@ -271,42 +358,66 @@ footer p {
 }
 
 .whatsapp-icon {
-    position: fixed; /* Fixa o ícone no canto da tela */
-    bottom: 20px; /* Distância da parte inferior da tela */
-    right: 20px; /* Distância do lado direito da tela */
-    width: 60px; /* Largura do ícone */
-    height: 60px; /* Altura do ícone */
-    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: transform 0.3s ease; /* Transição suave para o hover */
+    position: fixed;
+    /* Fixa o ícone no canto da tela */
+    bottom: 20px;
+    /* Distância da parte inferior da tela */
+    right: 20px;
+    /* Distância do lado direito da tela */
+    width: 60px;
+    /* Largura do ícone */
+    height: 60px;
+    /* Altura do ícone */
+    z-index: 1000;
+    /* Garante que o ícone fique acima de outros elementos */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    transition: transform 0.3s ease;
+    /* Transição suave para o hover */
 }
 
 .whatsapp-icon img {
-    width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Deixa o ícone circular */
+    width: 100%;
+    /* Ajusta a imagem ao tamanho do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    /* Deixa o ícone circular */
 }
 
 .whatsapp-icon:hover {
-    transform: scale(1.1); /* Ampliação leve no hover */
+    transform: scale(1.1);
+    /* Ampliação leve no hover */
 }
 
 .instagram-icon {
-    position: fixed; /* Fixa o ícone no canto da tela */
-    bottom: 90px; /* Distância da parte inferior da tela */
-    right: 20px; /* Distância do lado direito da tela */
-    width: 60px; /* Largura do ícone */
-    height: 60px; /* Altura do ícone */
-    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: transform 0.3s ease; /* Transição suave para o hover */
+    position: fixed;
+    /* Fixa o ícone no canto da tela */
+    bottom: 90px;
+    /* Distância da parte inferior da tela */
+    right: 20px;
+    /* Distância do lado direito da tela */
+    width: 60px;
+    /* Largura do ícone */
+    height: 60px;
+    /* Altura do ícone */
+    z-index: 1000;
+    /* Garante que o ícone fique acima de outros elementos */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    transition: transform 0.3s ease;
+    /* Transição suave para o hover */
 }
 
 .instagram-icon img {
-    width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Deixa o ícone circular */
+    width: 100%;
+    /* Ajusta a imagem ao tamanho do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    /* Deixa o ícone circular */
 }
 
 .instagram-icon:hover {
-    transform: scale(1.1); /* Ampliação leve no hover */
+    transform: scale(1.1);
+    /* Ampliação leve no hover */
