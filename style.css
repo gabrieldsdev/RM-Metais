@@ -144,10 +144,29 @@ nav ul li a {
 
 @media (max-width: 480px) {
     .overlay-text {
-        font-size: 17px;
+        /* font-size: 17px; */
+        display: none;
     }
 
+    #banner {
+        display: relative;
+        /* Exibe o banner */
+        height: 70vh;
+        /* Define a altura do banner como 50vh */
+    }
 
+    #banner-video {
+        display: block;
+        /* Exibe o vídeo */
+        position: absolute;
+        /* Garante que o vídeo preencha a tela */
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        /* Garante que o vídeo preencha o contêiner */
+
+    }
 }
 
 
